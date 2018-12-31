@@ -2,6 +2,10 @@ package net.rondrae.giggity;
 
 import net.rondrae.giggity.models.VideoClass;
 
+/**
+ * This class holds interfaces to handle the clicking of items in recyclerviews
+ *
+ */
 public class ListenerClass {
 
 public ListenerClass(){

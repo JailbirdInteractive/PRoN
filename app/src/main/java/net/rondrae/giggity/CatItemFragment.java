@@ -89,7 +89,7 @@ ArrayList<CatItem>catItems;
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            new NetworkTask().execute("https://api.redtube.com/?data=redtube.Categories.getCategoriesList&output=json");
+            new NetworkTask().execute(getString(R.string.categories_url));
         }
         return view;
     }

@@ -76,7 +76,7 @@ public class VideoClass {
         ArrayList<VideoClass> videoClasses=new ArrayList<VideoClass>(jsonArray.length());
         for (int i=0;i<jsonArray.length();i++){
             try {
-                videoJsonObject=jsonArray.getJSONObject(i).getJSONObject("video");
+                videoJsonObject=jsonArray.getJSONObject(i);
 
             } catch (JSONException e) {
                 e.printStackTrace();

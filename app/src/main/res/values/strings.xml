@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Giggity</string>
+    <string name="categories_url"><![CDATA[https://api.redtube.com/?data=redtube.Categories.getCategoriesList&output=json]]></string>
 </resources>

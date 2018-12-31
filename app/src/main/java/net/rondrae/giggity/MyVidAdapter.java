@@ -64,6 +64,7 @@ public class MyVidAdapter extends RecyclerView.Adapter<MyVidAdapter.ViewHolder> 
             }
         });
     }
+    //Methods for bounce animation
     public void didTapButton(View view) {
         final Animation myAnim = AnimationUtils.loadAnimation(mContext, R.anim.bounce);
         BounceInterpolator interpolator = new BounceInterpolator(0.1, 20);

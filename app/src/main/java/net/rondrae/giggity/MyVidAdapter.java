@@ -50,7 +50,7 @@ public class MyVidAdapter extends RecyclerView.Adapter<MyVidAdapter.ViewHolder> 
         //holder.mContentView.setText(mValues.get(position).content);
         holder.descriptionView.setText(mValues.get(position).getVideoDescription());
         if(!mValues.get(position).getThumbnail().isEmpty())
-            Picasso.get().load(mValues.get(position).getThumbnail()).placeholder(R.drawable.food).into(holder.mContentView);
+            Picasso.get().load(mValues.get(position).getThumbnail()).placeholder(R.drawable.food).resize(150,150).into(holder.mContentView);
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override

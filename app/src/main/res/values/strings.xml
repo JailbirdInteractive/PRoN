@@ -1,4 +1,40 @@
 <resources>
     <string name="app_name">Giggity</string>
     <string name="categories_url"><![CDATA[https://api.redtube.com/?data=redtube.Categories.getCategoriesList&output=json]]></string>
+    <string name="iframe_string"><![CDATA[
+    "<html>\n"
+    "<head>\n"
+
+
+    "<style>\n"
+        ".video-container { \n"
+        "position: relative; \n"
+        "padding-bottom: 56.25%; \n"
+        "padding-top: 35px; \n"
+        "height: 0; \n"
+        "overflow: hidden; \n"
+        "}\n"
+        ".video-container iframe { \n"
+        "position: absolute; \n"
+        "top:0; \n"
+        "left: 0; \n"
+        "width: 100%; \n"
+        "height: 100%; \n"
+        "}\n"
+        "body {background-color: powderblue;}\n"
+        "h1   {color: white;}\n"
+        "p    {color: red;}\n"
+        "</style>\n"
+        "</head>\n"
+        "<body>\n"
+        "<h1>Giggity Video</h1>\n"
+
+        "<div class=\"video-container\">\n"
+        "    <iframe width=\"840\" height=\"585\" src=\""%s\"" frameborder=\"0\" allowfullscreen>"
+        "    </iframe>\n"
+
+        "</div>\n"
+        "</body>\n"
+        "</html>"
+]]></string>
 </resources>

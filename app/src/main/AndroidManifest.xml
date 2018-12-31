@@ -29,6 +29,8 @@
         </activity>
         <activity android:name=".ImagePage"
             android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="true"
+
             />
         <activity android:name=".PickerActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"

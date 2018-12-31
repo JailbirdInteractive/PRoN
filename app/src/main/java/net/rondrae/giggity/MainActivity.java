@@ -90,6 +90,11 @@ public class MainActivity extends AppCompatActivity implements MaterialSearchBar
         super.onResume();
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
     /**
      * This method calls ths loadJSONFromAsset method and then gets the string for the name of the category
      * It then creates a MenuItem to be added to the Navigation Menu
@@ -289,6 +294,7 @@ public class MainActivity extends AppCompatActivity implements MaterialSearchBar
         protected void onPostExecute(String s) {
           //parsing JSON
             try {
+
                 JSONObject object = new JSONObject(s);
                 JSONArray array = object.getJSONArray("videos");
 
@@ -300,8 +306,11 @@ public class MainActivity extends AppCompatActivity implements MaterialSearchBar
                 recyclerView.setAdapter(adapter);
 
 
-            } catch (JSONException e) {
+            } catch (JSONException e){
                 e.printStackTrace();
+            }
+            catch (NullPointerException n){
+                n.printStackTrace();
             }
 progressBar.setVisibility(View.INVISIBLE);
             super.onPostExecute(s);
